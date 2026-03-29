@@ -5,7 +5,9 @@
   "homepage": "https://IvanBielozorov.github.io/Interactive-games",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Interactive-games/"
+    "build": "parcel build src/*.html --public-url /Interactive-games/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "gh-pages": "^6.3.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
