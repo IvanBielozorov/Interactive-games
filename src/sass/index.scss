@@ -1,2 +1,21 @@
 @import './common';
-@import './example';
+@import './base/reset';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/placeholders';
+@import './base/typography';
+@import './components/modal-register';
+@import './layout/header';
+@import './components/year-of-birth';
+@import './components/guess-the-number';
+@import './components/rock-paper-scissors';
+@import './components/calculator';
+@import './components/time-calculator';
+@import './components/dinosaur-game';
+@import './components/football';
+@import './components/three-numbers';
+@import './components/our-team';
+@import './components/choose-a-scientist';
+@import './layout/footer';
+@import './components/modal-gratitude';
+
