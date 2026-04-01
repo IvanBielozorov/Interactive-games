@@ -102,3 +102,14 @@ dist
 
 # TernJS port file
 .tern-port
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# parcel cache
+.parcel-cache/
+
+# optional
+.cache/
