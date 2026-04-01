@@ -9,6 +9,7 @@ const refs = {
   scoreYou: document.createElement('span'),
   countYouEl: document.createElement('p'),
   scoreComp: document.createElement('span'),
+  copmButtonEl: document.querySelector('.rps-button'),
 };
 
 refs.winEl.classList.add('rps-win');
@@ -24,7 +25,12 @@ const secondButton = refs.allbuttonsEl[1];
 const thirdButton = refs.allbuttonsEl[2];
 
 refs.winEl.textContent = 'Вибіріть щоб почати!';
-refs.listEl.append(refs.winEl);
+refs.winEl.style.marginTop = '36px';
+refs.winEl.style.marginBottom = '36px';
+refs.listEl.after(refs.winEl);
+
+refs.scoreYou = 0;
+refs.scoreComp = 0;
 
 refs.countYouEl.textContent = `Ви - ${refs.scoreYou}`;
 refs.countCopmEl.textContent = `Комп’ютер - ${refs.scoreComp}`;
@@ -32,8 +38,6 @@ refs.winEl.append(refs.countYouEl);
 refs.countYouEl.append(refs.countCopmEl);
 
 let option = 0;
-refs.scoreYou = 0;
-refs.scoreComp = 0;
 
 firstButton.addEventListener('click', onRockButtonClicked);
 function onRockButtonClicked(event) {
@@ -86,4 +90,9 @@ function onScissorsButtonClicked(event) {
     refs.winEl.style.color = '#900';
     refs.scoreComp += 1;
   }
+}
+refs.copmButtonEl.style.cursor = 'pointer';
+refs.copmButtonEl.addEventListener('click', onCompButtonElClicked);
+function onCompButtonElClicked(event) {
+  console.log("comp next")
 }
