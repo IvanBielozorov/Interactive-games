@@ -4,6 +4,10 @@
   &-title {
     padding-bottom: 36px;
   }
+  &-wrap {
+    display: flex;
+    // flex-direction: column;
+  }
   &-list {
     display: flex;
     column-gap: 38px;
@@ -20,9 +24,12 @@
     width: 40px;
     height: 40px;
   }
+  &-count-wrap {
+    margin-left: 104px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
   &-button {
-    font-family: var(--font-family);
-    font-weight: 400;
     font-size: 12px;
     color: #fff;
     border-radius: 20px;
