@@ -1,0 +1,55 @@
+.year-of-birth__title {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.year-of-birth__box {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 576px;
+}
+
+.year-of-birth__input {
+  background-color: #d7d7d7;
+  border: none;
+  border-radius: 20px;
+  width: 215px;
+  padding: 10px;
+  box-shadow: 5px 5px #0003;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.year-of-birth__btn {
+  height: 42px;
+  width: 35px;
+  margin-left: -35px;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #7e7e7e;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.year-of-birth__text {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: auto;
+}
