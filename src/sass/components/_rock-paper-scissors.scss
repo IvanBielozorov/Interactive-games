@@ -1,6 +1,11 @@
 .rps {
   padding-top: 36px;
   padding-bottom: 36px;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &-title {
     padding-bottom: 36px;
   }
