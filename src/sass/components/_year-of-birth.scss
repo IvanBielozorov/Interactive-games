@@ -1,8 +1,5 @@
 .year-of-birth__title {
   text-align: center;
-  margin-bottom: 36px;
-  font-size: 16px;
-  font-weight: 400;
 }
 
 .year-of-birth__box {
@@ -23,7 +20,7 @@
     outline: none;
   }
   &::placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -49,7 +46,7 @@
 }
 
 .year-of-birth__text {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   margin-left: auto;
 }
