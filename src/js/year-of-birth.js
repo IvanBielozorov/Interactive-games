@@ -5,7 +5,7 @@ const textYear = document.querySelector('.year-of-birth__text');
 btnYear.addEventListener('click', () => {
   const year = parseInt(inputYear.value);
 
-  if (isNaN(year) || inputYear.value.trim() === '') {
+  if (isNaN(year) || inputYear.value === '') {
     textYear.textContent = 'Будь ласка, введіть рік!';
     textYear.style.color = 'red';
     return;
