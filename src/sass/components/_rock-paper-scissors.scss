@@ -8,15 +8,18 @@
   }
   &-title {
     padding-bottom: 36px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
   }
   &-wrap {
     display: flex;
-    // flex-direction: column;
   }
   &-list {
     display: flex;
     column-gap: 38px;
     width: 256px;
+    margin-left: 200px;
   }
   &-item-button {
     border-radius: 20px;
