@@ -1,8 +1,15 @@
+.text-calculator {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 36px;
+  }
 .calculator {
     display: flex;
     gap: 38px;
     align-items: center;
-  
+    
     input {
         border-radius: 20px;
         padding: 10px 20px;
