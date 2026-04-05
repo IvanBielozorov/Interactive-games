@@ -1,0 +1,22 @@
+.three-numbers {
+    &_box{
+      justify-content: center;
+      gap: 38px;
+      display: flex;
+    }
+
+    &_input{
+      background-color: #d7d7d7;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+      max-width: 140px;
+      padding: 10px 20px;
+    }
+
+    &_result {
+      text-align: center;
+      margin-top: 36px;
+      font-size: 12px;
+    }
+}
