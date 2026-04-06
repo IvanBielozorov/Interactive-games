@@ -217,3 +217,112 @@ function onForthButtonClicked() {
     }
   });
 }
+
+// Fifth button
+
+refs.buttonEls[4].addEventListener('click', onFifthButtonClicked);
+
+function onFifthButtonClicked() {
+  refs.scientistsEls.forEach(li => {
+    refs.scientistsGridEl.appendChild(li);
+  });
+
+  const sorted = [...scientists].sort((a, b) => {
+    const lifeA = a.dead - a.born;
+    const lifeB = b.dead - b.born;
+    return lifeA - lifeB; // smallest → biggest
+  });
+
+  sorted.forEach(scientist => {
+    const index = scientists.findIndex(s => s.id === scientist.id);
+    const li = refs.scientistsEls[index];
+    refs.scientistsGridEl.appendChild(li);
+  });
+}
+
+// Sixth button
+
+refs.buttonEls[5].addEventListener('click', onSixthButtonClicked);
+
+function onSixthButtonClicked() {
+  refs.scientistsEls.forEach(li => {
+    refs.scientistsGridEl.appendChild(li);
+  });
+  scientists.forEach((scientist, i) => {
+    const nameLetters = scientist.name.split('');
+    if (nameLetters[0] != 'A') {
+      refs.scientistsEls[i].remove();
+    }
+  });
+}
+
+// Seventh button
+
+refs.buttonEls[6].addEventListener('click', onSeventhButtonClicked);
+
+function onSeventhButtonClicked() {
+  refs.scientistsEls.forEach(li => {
+    refs.scientistsGridEl.appendChild(li);
+  });
+  let latestBirth = scientists[0];
+  scientists.forEach(scientist => {
+    if (scientist.born > latestBirth.born) {
+      latestBirth = scientist;
+    }
+  });
+  scientists.forEach((scientist, i) => {
+    if (scientist != latestBirth) {
+      refs.scientistsEls[i].remove();
+    }
+  });
+}
+
+// Eighth button
+
+refs.buttonEls[7].addEventListener('click', onEighthButtonClicked);
+
+function onEighthButtonClicked() {
+  refs.scientistsEls.forEach(li => {
+    refs.scientistsGridEl.appendChild(li);
+  });
+  let latestBirth = scientists[0];
+  let earliestBirth = scientists[0];
+  scientists.forEach((scientist, i) => {
+    scientists.forEach(scientist => {
+      if (scientist.born > latestBirth.born) {
+        latestBirth = scientist;
+      }
+    });
+    scientists.forEach(scientist => {
+      if (scientist.born < earliestBirth.born) {
+        earliestBirth = scientist;
+      }
+    });
+  });
+  scientists.forEach((scientist, i) => {
+    if (scientist != earliestBirth && scientist != latestBirth) {
+      refs.scientistsEls[i].remove();
+    }
+  });
+  alert(
+    'Katherine Blodgett was born the latest and Nicolaus Copernicus was born the earliest'
+  );
+}
+
+// nineth button
+
+refs.buttonEls[8].addEventListener('click', onNinethButtonClicked);
+
+function onNinethButtonClicked() {
+  refs.scientistsEls.forEach(li => {
+    refs.scientistsGridEl.appendChild(li);
+  });
+  scientists.forEach((scientist, i) => {
+    const firstLetterName = scientist.name[0].toLowerCase();
+    const firstLetterSurname = scientist.surname[0].toLowerCase();
+
+    if (firstLetterName !== firstLetterSurname) {
+      refs.scientistsEls[i].remove();
+    }
+  });
+}
