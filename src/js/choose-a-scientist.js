@@ -250,7 +250,7 @@ function onSixthButtonClicked() {
   });
   scientists.forEach((scientist, i) => {
     const nameLetters = scientist.name.split('');
-    if (nameLetters[0] != 'A') {
+    if (nameLetters[0] === 'A') {
       refs.scientistsEls[i].remove();
     }
   });
