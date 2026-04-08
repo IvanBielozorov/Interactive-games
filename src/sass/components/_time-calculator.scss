@@ -1,8 +1,12 @@
+.time-calculator__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+
 .time-calculator__box {
   display: flex;
-  align-items: center;
-  margin: 0 auto;
-  width: 500px;
 }
 
 .time-calculator__input {
@@ -44,5 +48,4 @@
 .time-calculator__text {
   font-size: 13px;
   font-weight: 400;
-  margin-left: auto;
 }
