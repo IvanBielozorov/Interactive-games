@@ -1,0 +1,56 @@
+.container__footer {
+  display: flex;
+  gap: 186px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  align-items: center;
+}
+.footer__item {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+.footer-address__link {
+  color: black;
+}
+.footer__input {
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: #d7d7d7;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 80px 10px 10px;
+  width: 204px;
+  height: 35px;
+
+  &:focus {
+    outline: none;
+  }
+}
+.footer-input__container {
+  display: flex;
+  gap: 36px;
+}
+.footer__btn {
+  color: #fff;
+  background-color: #000000;
+  font-size: 12px;
+  border: none;
+  border-radius: 20px;
+  width: 107px;
+  transition: 250ms ease-in-out;
+  border: #000 1px solid;
+  &:hover {
+    background-color: #d7d7d7;
+    color: #000;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+.footer-input__subtitle {
+  font-size: 6px;
+  padding-top: 18px;
+}
