@@ -1,12 +1,11 @@
 @import './common';
 @import './base/reset';
 @import './abstracts/variables';
-@import './abstracts/mixins';
-@import './abstracts/placeholders';
 @import './base/typography';
 @import './components/modal-register';
 @import './layout/header';
 @import './components/container';
+@import './components/hero';
 @import './components/year-of-birth';
 @import './components/guess-the-number';
 @import './components/rock-paper-scissors';

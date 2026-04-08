@@ -1,4 +1,5 @@
 .scientists {
+  padding-bottom: 36px;
   &-grid {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +18,17 @@
       height: 100px;
       background: $light-gray;
     }
+  }
+  &-name {
+    font-size: 8px;
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 41px;
+  }
+  &-life {
+    font-size: 8px;
+    line-height: 1.7;
+    text-align: center;
   }
   &-buttons-grid {
     display: flex;

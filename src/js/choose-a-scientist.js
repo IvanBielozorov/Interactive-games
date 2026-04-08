@@ -100,35 +100,52 @@ refs.titleEl.classList.add('title');
 refs.containerScientistsEls.appendChild(refs.titleEl);
 // Creating scinetists
 
-const images = [
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-  './#',
-];
+// const images = [
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+//   './#',
+// ];
 
 refs.scientistsGridEl.classList.add('scientists-grid');
 
-scientists.forEach((scientist, index) => {
-  const li = document.createElement('li');
-  const img = document.createElement('img');
-  img.src = images[index] || './#'; // fallback if no image
-  img.alt = `${scientist.name} ${scientist.surname}`;
-  li.appendChild(img);
+// scientists.forEach((scientist, index) => {
+//   const li = document.createElement('li');
+//   const img = document.createElement('img');
+//   img.src = images[index] || './#'; // fallback if no image
+//   img.alt = `${scientist.name} ${scientist.surname}`;
+//   li.appendChild(img);
 
+//   refs.scientistsGridEl.appendChild(li);
+//   refs.scientistsEls.push(li);
+//   li.classList.add('scientists-el');
+// });
+
+// refs.containerScientistsEls.appendChild(refs.scientistsGridEl);
+scientists.forEach(scientist => {
+  const li = document.createElement('li');
+  const nameEl = document.createElement('p');
+  nameEl.textContent = `${scientist.name} ${scientist.surname}`;
+  nameEl.classList.add('scientists-name');
+
+  const lifeEl = document.createElement('p');
+  lifeEl.textContent = `(${scientist.born} - ${scientist.dead})`;
+  lifeEl.classList.add('scientists-life');
+
+  li.appendChild(nameEl);
+  li.appendChild(lifeEl);
   refs.scientistsGridEl.appendChild(li);
   refs.scientistsEls.push(li);
   li.classList.add('scientists-el');
 });
-
 refs.containerScientistsEls.appendChild(refs.scientistsGridEl);
 
 // Creating buttons with its text
