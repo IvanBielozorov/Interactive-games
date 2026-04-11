@@ -165,16 +165,18 @@ const buttonTexts = [
 
 buttonTexts.forEach(text => {
   const li = document.createElement('li');
+  li.classList.add('scientists-buttons-grid-item');
   const button = document.createElement('button');
   button.textContent = text; // assign the unique text
   button.classList.add('scientists-buttons');
   li.appendChild(button);
+  console.log(li);
   refs.buttonsGridEl.appendChild(li);
   refs.buttonEls.push(button); // store the button in refs
 });
 refs.containerScientistsEls.appendChild(refs.buttonsGridEl);
 
-refs.buttonEls[7].style.height = '50px';
+// refs.buttonEls[7].style.height = '50px';
 
 // Functions for buttons
 

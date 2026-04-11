@@ -4,27 +4,31 @@ body {
   font-size: 16px;
   color: #000;
 }
-// .body {
-//   background-image: url('../images/background.jpg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
+.body {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 section {
-  position: relative;
-} 
+  // position: relative;
+  border-bottom: 1px solid black;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  width: 1090px;
+}
 
-section::after {
-  content: '';
-  display: block;
-  width: 536px;
-  height: 1px;
-  background: black;
-  margin: 36px auto;
-}
-section:last-of-type::after {
-  content: none;
-}
+// section::after {
+//   content: '';
+//   display: block;
+//   width: 536px;
+//   height: 1px;
+//   background: black;
+//   margin: 36px auto;
+// }
+// section:last-of-type::after {
+//   content: none;
+// }
 .title {
   text-align: center;
   margin-bottom: 36px;
