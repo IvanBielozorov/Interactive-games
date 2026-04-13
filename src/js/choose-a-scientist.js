@@ -155,7 +155,7 @@ const buttonTexts = [
   'Які вчені народилися в 19 ст.',
   'Знайти рік народження Albert Einshtein',
   'Відсортувати вчених за алфавітом',
-  'Знайти вчених, прізвища яких починаються на на літеру “С” ',
+  'Знайти вчених, прізвища яких починаються на літеру “С” ',
   'Відсортувати вчених за кількістю прожитих років',
   'Видалити всіх вчених, ім’я яких починається на “А”',
   'Знайти вченого, який народився найпізніше',
@@ -170,7 +170,7 @@ buttonTexts.forEach(text => {
   button.textContent = text; // assign the unique text
   button.classList.add('scientists-buttons');
   li.appendChild(button);
-  console.log(li);
+  // console.log(li);
   refs.buttonsGridEl.appendChild(li);
   refs.buttonEls.push(button); // store the button in refs
 });

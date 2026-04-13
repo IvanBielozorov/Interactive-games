@@ -31,11 +31,16 @@
     text-align: center;
   }
   &-buttons-grid {
-    display: flex;
+    width: 857px;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 20px 36px;
+    margin-left: auto;
+    margin-right: auto;
     &-item {
       // width: calc((100% - 36px) / 2);
       width: fit-content;
@@ -48,6 +53,11 @@
       &:last-child {
         margin-left: auto;
         margin-right: auto;
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+      &:nth-child(8) {
+        width: 368px;
       }
     }
   }
@@ -59,7 +69,7 @@
     color: $white;
     border-radius: 20px;
     padding: 10px 20px;
-    height: 35px;
+    min-height: 35px;
     box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
     background: $black;
     cursor: pointer;
