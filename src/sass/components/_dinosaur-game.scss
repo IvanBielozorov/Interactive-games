@@ -1,0 +1,57 @@
+.dinosaur-game {
+  position: relative;
+}
+.dinosaur-game__canvas {
+  display: block;
+  margin: 0 auto;
+}
+.dinosaur-game-start__btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: $white;
+  background-color: $medium-gray;
+  border: none;
+  border-radius: 10px;
+  transition: all 250ms ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  &:hover,
+  &:focus {
+    color: #000;
+    background-color: #d7d7d7;
+  }
+}
+.dinosaur-game__box {
+  opacity: 0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #d7d7d7;
+  transition: all 250ms ease-in-out;
+  pointer-events: none;
+}
+.dinosaur-game-again__btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: #000;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
