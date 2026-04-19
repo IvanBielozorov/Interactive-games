@@ -1,24 +1,46 @@
 const elements = {
   first: document.querySelector('.calculator-1'),
   second: document.querySelector('.calculator-2'),
-  result: document.querySelector('.result'),
+  result: document.querySelector('.calculator .result'),
   plus: document.querySelector('.plus'),
   minus: document.querySelector('.minus'),
   multiply: document.querySelector('.multiply'),
   divide: document.querySelector('.divide'),
   equals: document.querySelector('.equals'),
 };
-
 let operation;
 
-elements.plus.onclick = () => (operation = (a, b) => a + b);
-elements.minus.onclick = () => (operation = (a, b) => a - b);
-elements.multiply.onclick = () => (operation = (a, b) => a * b);
-elements.divide.onclick = () =>
-  (operation = (a, b) => (b ? a / b : 'Помилка!'));
+const button = document.querySelectorAll('.operators-button');
+button.forEach(btn =>
+  btn.addEventListener('click', () => {
+    operation = btn.dataset.operation;
+  })
+);
 
-elements.equals.onclick = () => {
+elements.equals.addEventListener('click', () => {
   const a = +elements.first.value;
   const b = +elements.second.value;
-  elements.result.value = operation(a, b);
-};
+  let result;
+  switch (operation) {
+    case '+':
+      result = a + b;
+      break;
+    case '-':
+      result = a - b;
+      break;
+    case '*':
+      result = a * b;
+      break;
+    case '/':
+      if (b === 0) {
+        elements.result.value = 'Помилка!';
+        return;
+      } else {
+        result = a / b;
+      }
+      break;
+    default:
+      elements.result.value = 'Невідома операція!';
+  }
+  elements.result.value = result;
+});
