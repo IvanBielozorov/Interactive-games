@@ -1,4 +1,5 @@
 import './js/modal-register.js';
+import './js/section-setup.js';
 import './js/header.js';
 import './js/year-of-birth.js';
 import './js/guess-the-number.js';
