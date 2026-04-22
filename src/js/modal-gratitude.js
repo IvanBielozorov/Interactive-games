@@ -3,9 +3,22 @@
     openModalBtn: document.querySelector('[data-footer-modal-open]'),
     closeModalBtn: document.querySelector('[data-footer-modal-close]'),
     modal: document.querySelector('[data-footer-modal]'),
+    emailInput: document.querySelector('.footer__input'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
+console.log(refs.emailInput);
+
+
+  refs.openModalBtn.addEventListener('click', () => {
+    if (
+      refs.emailInput.checkValidity() &&
+      refs.emailInput.value.trim() !== ''
+    ) {
+      toggleModal();
+    } else {
+      alert('Будь ласка, введіть коректний email 📧');
+    }
+  });
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   refs.modal.addEventListener('click', onBackdropClick);
