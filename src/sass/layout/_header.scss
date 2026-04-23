@@ -40,48 +40,73 @@
     position: relative;
   }
 
+  /* hide checkbox */
   &__checkbox {
     display: none;
+  }
 
-    &:checked ~ .dropdown {
-      visibility: visible;
-    }
+  /* dropdown hidden by default */
+  &__checkbox ~ .dropdown {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+
+    background: var(--bg-container);
+    border: 1px solid var(--text-color);
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+  }
+
+  /* show dropdown when checked */
+  &__checkbox:checked ~ .dropdown {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   &__link--arrow {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 12px;
+
     display: flex;
     align-items: center;
     gap: 6px;
-    color: var(--text-color);
 
+    color: var(--text-color);
+    cursor: pointer;
+
+    /* arrow */
     &::after {
-      content: "";
+      content: '';
       width: 7px;
       height: 7px;
-      margin-bottom: 5px;
+
+      display: inline-block;
+
       border-right: 1px solid var(--text-color);
       border-bottom: 1px solid var(--text-color);
+
       transform: rotate(45deg);
+      transition: transform 0.2s ease;
     }
+  }
+
+  /* rotate arrow when checkbox is checked */
+  &__checkbox:checked + &__link--arrow::after {
+    transform: rotate(225deg);
   }
 }
 
 .dropdown {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 160px;
-
-  background: var(--bg-container);
-  border: 1px solid var(--text-color);
-  border-top: none;
-  border-radius: 0 0 20px 20px;
-  visibility: hidden;
-
   a {
     display: block;
     padding: 10px;
@@ -94,6 +119,7 @@
   }
 }
 
+/* theme toggle */
 .theme-toggle {
   background: none;
   border: none;
@@ -112,6 +138,7 @@
   }
 }
 
+/* dark mode */
 .dark-theme {
   .icon--sun {
     display: none;
