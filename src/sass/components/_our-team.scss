@@ -1,12 +1,19 @@
-.our-team__slider {
+.our-team-box {
   display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  gap: 10px;
+  justify-content: center;
+}
+.our-team__arrows {
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
 }
 .our-team__wrapper {
   width: 320px;
   overflow: hidden;
+}
+.our-team__wrapper-arrows{
+  display: flex;
+  align-items: center;
 }
 .our-team__list {
   display: flex;
@@ -24,7 +31,6 @@
   flex-direction: column;
   flex: 0 0 100%;
 }
-
 .our-team__info {
   width: 320px;
 }
@@ -32,10 +38,6 @@
   width: 150px;
   height: 150px;
   border-radius: 20px;
-  // background-image: url("../images/ivan.jpg");
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // background-position: center;
 }
 .our-team__headline {
   font-weight: 400;
@@ -48,7 +50,6 @@
   text-align: center;
   margin-bottom: 24px;
 }
-
 .our-team__dots {
   display: flex;
   justify-content: center;
