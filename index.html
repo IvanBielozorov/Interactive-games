@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=ru><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Interactive games</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Sacramento&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/Interactive-games/Interactive-games.d3128b47.css><body class=body>
+<!DOCTYPE html><html lang=ru><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Interactive games</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Sacramento&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/Interactive-games/Interactive-games.5502ced3.css><body class=body>
     
     
     <div class=backdrop data-modal>
@@ -35,14 +35,46 @@
   </div>
 </div>
 
-    
+    <header class=header>
+  <div class=header__container>
+
+    <div class=logo>
+      <img src=/Interactive-games/logo.e06fccd6.png alt=logo>
+    </div>
+    <nav class=nav>
+      <div class=nav__item>
+        <input type=checkbox id=menu-toggle class=nav__checkbox>
+        <label for=menu-toggle class="nav__link nav__link--arrow">
+          Інтерактив
+        </label>
+        <div class=dropdown>
+          <a href=# data-filter=number>Числовий</a>
+          <a href=# data-filter=game>Ігровий</a>
+          <a href=# data-filter=intro>Ознайомчий</a>
+        </div>
+      </div>
+      <a href=#>Наша команда</a>
+      <a href=#>Контакти</a>
+    </nav>
+    <button class=theme-toggle id=themeToggle>
+<img src=/Interactive-games/sun.304ba81c.png alt=light class="icon icon--sun">
+<img src=/Interactive-games/moon.0aa5d734.png alt=dark class="icon icon--moon">
+</button>
+    <div class=header__right>
+      <span>Вітаємо, User!</span>
+    </div>
+
+  </div>
+
+
+</header>
     <section class=hero-section>
   <div class=container>
     <h1 class="hero-title title">Популярні інетрактивні ігри</h1>
   </div>
 </section>
 
-    <section class=year-of-birth>
+    <section class=year-of-birth id=1>
   <div class=container>
     <h2 class=title>Перевір в який рік ти народився</h2>
     <div class=year-of-birth__box>
@@ -55,7 +87,7 @@
   </div>
 </section>
 
-    <section class=section>
+    <section class=section-guess-the-number id=2>
   <div class=container>
     <h2 class=title>Вгадай число, яке загадав комп’ютер</h2>
     <div class=box>
@@ -98,7 +130,7 @@
   </div>
 </section>
 
-    <section class=section>
+    <section class=section-calculator id=4>
   <div class=container>
     <h2 class=title>Калькулятор</h2>
     <div class=calculator>
@@ -127,7 +159,7 @@
   </div>
 </section>
 
-    <section class=time-calculator>
+    <section class=time-calculator id=5>
   <div class=container>
     <h2 class=title>Калькулятор часу</h2>
     <div class=time-calculator__wrap>
@@ -143,7 +175,7 @@
   </div>
 </section>
 
-    <section class=dinosaur-game>
+    <section class=dinosaur-game id=6>
   <div class=dinosaur-game__wrap>
     <h3 class="dinosaur-game__title title">Google динозавр</h3>
     <canvas class=dinosaur-game__canvas width=600px height=200px data-dinosaur-canvas></canvas>
@@ -165,7 +197,7 @@
   <div class="container container-football-js"></div>
 </section>
 
-    <section class=three-numbers>
+    <section class=three-numbers id=8>
     <div class=container>
         <h3 class=title>Введіть 3 числа</h3>
         <ul class="cool-space three-numbers_box">
@@ -183,7 +215,7 @@
         <p class=three-numbers_result>Найбільше число, яке ви ввели</p>
     </div>
 </section>
-    <section class=section>
+    <section class=section id=9>
     <div class=container>
      <h2 class=title>Наша команда</h2>
      <div class=our-team__slider>
@@ -311,6 +343,6 @@
   </div>
 </div>
 
-    <script type=module src=/Interactive-games/Interactive-games.a2b8c6f1.js></script>
+    <script type=module src=/Interactive-games/Interactive-games.68e79e85.js></script>
   
 
