@@ -1,6 +1,7 @@
 const canvas = document.querySelector('[data-dinosaur-canvas]');
 const main = canvas.getContext('2d');
 const dino = document.querySelector('[data-dino-start]');
+const dinoDead = document.querySelector('[data-dino-end]');
 const cactus1 = document.querySelector('[data-cactus]');
 const startBtn = document.querySelector('[data-dinosaur-start]');
 const end = document.querySelector('[data-dinosaur-start-box');
@@ -18,6 +19,7 @@ let jumping;
 main.drawImage(dino, 30, y, 60, 60);
 
 startBtn.addEventListener('click', () => {
+  main.drawImage(dino, 30, y, 60, 60);
   start = setInterval(game, 10);
   gameOn = true;
   startBtn.style.opacity = 0;
@@ -89,7 +91,7 @@ function gameOver() {
     x = 600;
     y = 140;
     ms = 0;
-    main.drawImage(dino, 30, y, 60, 60);
+    main.drawImage(dinoDead, 30, y, 60, 60);
     mod = -2;
     sec = 0;
     pass = true;
