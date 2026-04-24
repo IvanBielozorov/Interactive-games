@@ -1,3 +1,16 @@
+:root {
+    --bg-page: #ffffff;
+    --bg-container: #ffffff;
+    --text-color: #000000;
+  }
+  
+  .dark-theme {
+    --bg-page: #2b2b2b;
+    --bg-container: #3a3a3a;
+    --text-color: #ffffff;
+  }
+
+
 //Fonts
 $font-family: "Montserrat Alternates", sans-serif;
 $second-family: "Inter", sans-serif;

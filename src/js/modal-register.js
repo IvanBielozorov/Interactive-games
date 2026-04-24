@@ -1,3 +1,10 @@
+export let savedWord = '';
+
+let onWordChange = null;
+
+export function setOnWordChange(callback) {
+  onWordChange = callback;
+}
 (() => {
   const refs = {
     closeModalBtn: document.querySelector('[data-modal-close]'),
@@ -15,7 +22,14 @@
   refs.form.addEventListener('submit', onInputChange);
   function onInputChange(event) {
     event.preventDefault();
-    const word = refs.input.value;
+    // const word = refs.input.value;
+    // savedWord = refs.input.value;
+    // onWordChange(savedWord);
+    savedWord = refs.input.value;
+
+    if (onWordChange) {
+      onWordChange(savedWord);
+    }
     // console.log(word);
     toggleModal();
   }
