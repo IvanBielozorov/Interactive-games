@@ -1,31 +1,32 @@
 const list = document.querySelector('.our-team__list');
 const dots = document.querySelectorAll('.our-team__dot');
-const nextBtn = document.querySelector('.slider-btn--next');
-const prevBtn = document.querySelector('.slider-btn--prev');
+const nextBtn = document.querySelector('.our-team__wrapper-arrows-svg-right');
+const prevBtn = document.querySelector('.our-team__wrapper-arrows-svg-left');
+
+function goToSlide(index) {
+  const width = list.clientWidth;
+
+  list.scrollTo({ left: width * index, behavior: 'smooth' });
+
+  document.querySelector('.our-team__dot.active')?.classList.remove('active');
+  dots[index].classList.add('active');
+}
+
 dots.forEach(dot => {
   dot.addEventListener('click', () => {
-    const index = dot.dataset.index;
-    const width = list.clientWidth;
-    list.scrollTo({ left: width * index, behavior: 'smooth' });
-    document.querySelector('.our-team__dot.active')?.classList.remove('active');
-    dot.classList.add('active');
+    goToSlide(parseInt(dot.dataset.index));
   });
 });
 
-nextBtn.addEventListener('click', () => {
-  const activeDot = document.querySelector('.our-team__dot.active');
-  const index = (parseInt(activeDot.dataset.index) + 1) % dots.length;
-  const width = list.clientWidth;
-  list.scrollTo({ left: width * index, behavior: 'smooth' });
-  activeDot.classList.remove('active');
-  dots[index].classList.add('active');
+nextBtn?.addEventListener('click', () => {
+  const active = document.querySelector('.our-team__dot.active');
+  const index = (parseInt(active.dataset.index) + 1) % dots.length;
+  goToSlide(index);
 });
-prevBtn.addEventListener('click', () => {
-  const activeDot = document.querySelector('.our-team__dot.active');
+
+prevBtn?.addEventListener('click', () => {
+  const active = document.querySelector('.our-team__dot.active');
   const index =
-    (parseInt(activeDot.dataset.index) - 1 + dots.length) % dots.length;
-  const width = list.clientWidth;
-  list.scrollTo({ left: width * index, behavior: 'smooth' });
-  activeDot.classList.remove('active');
-  dots[index].classList.add('active');
+    (parseInt(active.dataset.index) - 1 + dots.length) % dots.length;
+  goToSlide(index);
 });

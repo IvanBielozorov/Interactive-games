@@ -1,3 +1,6 @@
+.footer {
+  background-color: white;
+}
 .container__footer {
   display: flex;
   gap: 186px;
@@ -5,6 +8,10 @@
   padding-bottom: 60px;
   align-items: center;
 }
+// .footer-logo {
+//   width: 165px;
+//   height: 70px;
+// }
 .footer__item {
   display: flex;
   flex-direction: row;

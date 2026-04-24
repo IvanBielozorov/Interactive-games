@@ -51,3 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const headerTeam = document.querySelector('.header-our-team-js');
+
+headerTeam.addEventListener('click', e => {
+  e.preventDefault();
+
+  document.getElementById('9').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+  });
+});
+
+const headerContacts = document.querySelector('.header-our-team-js-contacts');
+
+headerContacts.addEventListener('click', e => {
+  e.preventDefault();
+
+  document.querySelector('.footer').scrollIntoView({
+    behavior: 'smooth',
+  });
+});

@@ -1,6 +1,7 @@
 .our-team-box {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .our-team__arrows {
   cursor: pointer;
@@ -11,9 +12,24 @@
   width: 320px;
   overflow: hidden;
 }
-.our-team__wrapper-arrows{
+.our-team__wrapper-arrows {
   display: flex;
   align-items: center;
+  // position: relative;
+}
+.our-team__wrapper-arrows-svg {
+  position: absolute;
+  cursor: pointer;
+  &-left {
+    width: 50px;
+    height: 100px;
+    top: 25px;
+    right: 807px;
+  }
+  &-right {
+    top: 25px;
+    left: 807px;
+  }
 }
 .our-team__list {
   display: flex;
