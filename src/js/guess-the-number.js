@@ -6,7 +6,9 @@ let random = Math.floor(Math.random() * 10) + 1;
 
 btn.addEventListener('click', () => {
   const value = Number(input.value);
-
+  if (value > 10 || value < 1) {
+    alert('Введіть число від 1 до 10!');
+  }
   if (value === random) {
     result.textContent = `Вітаю, ви вгадали число! (${random})`;
     result.className = 'result win';

@@ -143,7 +143,27 @@
 }
 
 /* dark mode */
+body.dark-theme {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../images/background.jpg') center no-repeat,
+    var(--bg-page);
+  transition: color 0.75s ease;
+  // transition-property: background-color, color;
+  // transition-duration: 1000ms, 500ms;
+  // transition-timing-function: ease, ease;
+}
 .dark-theme {
+  // background:
+  //   linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  //   url('../images/background.jpg') center / cover no-repeat,
+  //   var(--bg-page);
+  // transition:
+  // background-color 2s ease,
+  // color 0.75s ease;
+  // transition-property: background-color, color;
+  // transition-duration: 1000ms, 500ms;
+  // transition-timing-function: ease, ease;
   .icon--sun {
     display: none;
   }
@@ -151,4 +171,7 @@
   .icon--moon {
     display: block;
   }
+}
+.logo-js {
+  filter: invert(1);
 }

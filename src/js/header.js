@@ -8,6 +8,11 @@ const btn = document.getElementById('themeToggle');
 
 btn.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
+  // invert colors
+  const invertedEl = document.querySelectorAll('.logo-js-toggle');
+  invertedEl.forEach(el => {
+    el.classList.toggle('logo-js');
+  });
 });
 
 // suffics
