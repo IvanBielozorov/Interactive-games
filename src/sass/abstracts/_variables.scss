@@ -5,6 +5,10 @@
   --hover-color: #f1f1f1;
   --dino-color: #d9d9d9;
   --dino-button-color: #a29d9d;
+  --box-shadow: #0003;
+  --green: #039900;
+  --red: #900;
+  --draw: black;
 }
 
 .dark-theme {
@@ -13,9 +17,21 @@
   --text-color: #ffffff;
   --hover-color: black;
   --dino-color: rgb(121, 121, 121);
-  -dino-button-color: rgb(150, 150, 150);
+  --dino-button-color: rgb(150, 150, 150);
+  --box-shadow: #595757;
+  --green: #06d602;
+  --red: rgb(251, 77, 77);
+  --draw: white;
 }
-
+.green {
+  color: var(--green);
+}
+.red {
+  color: var(--red);
+}
+.draw {
+  color: var(--draw);
+}
 //Fonts
 $font-family: 'Montserrat Alternates', sans-serif;
 $second-family: 'Inter', sans-serif;

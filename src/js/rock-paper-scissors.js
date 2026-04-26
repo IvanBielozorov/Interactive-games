@@ -45,18 +45,18 @@ function handleChoice(choice) {
   compChoice = Math.floor(Math.random() * 3) + 1;
 
   const winner = determineWinner(userChoice, compChoice);
-
+  refs.winEl.classList.remove('green', 'red', 'draw');
   if (winner === 'user') {
     refs.winEl.textContent = 'Ви виграли раунд!';
-    refs.winEl.style.color = '#039900';
+    refs.winEl.classList.add('green');
     scoreYou += 1;
   } else if (winner === 'comp') {
     refs.winEl.textContent = 'Комп’ютер виграв раунд!';
-    refs.winEl.style.color = '#900';
+    refs.winEl.classList.add('red');
     scoreComp += 1;
   } else {
     refs.winEl.textContent = 'Нічия!';
-    refs.winEl.style.color = '#000';
+    refs.winEl.classList.add('draw');
   }
 
   refs.countYouEl.textContent = `Ви - ${scoreYou}`;

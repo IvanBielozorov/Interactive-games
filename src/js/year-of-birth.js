@@ -12,12 +12,12 @@ btnYear.addEventListener('click', () => {
   }
 
   const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-
+  textYear.classList.remove('green', 'red');
   if (isLeapYear) {
     textYear.textContent = 'Ви народилися у високосний рік!';
-    textYear.style.color = 'green';
+    textYear.classList.add('green');
   } else {
     textYear.textContent = 'Ви народилися не у високосний рік!';
-    textYear.style.color = 'red';
+    textYear.classList.add('red');
   }
 });
