@@ -8,15 +8,14 @@
   padding-bottom: 60px;
   align-items: center;
 }
-// .footer-logo {
-//   width: 165px;
-//   height: 70px;
-// }
 .footer__item {
   display: flex;
   flex-direction: row;
   font-size: 12px;
   padding-bottom: 5px;
+  &:hover {
+    color: var(--dino-button-color);
+  }
 }
 .footer-address__link {
   --text-color: #000000;

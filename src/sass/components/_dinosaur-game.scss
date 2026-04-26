@@ -1,9 +1,13 @@
 .dinosaur-game {
   position: relative;
 }
+.dinosaur-game__wrap {
+  margin-bottom: 72px;
+}
 .dino-title-score {
   text-align: end;
-  margin-right: 265px;
+  margin-right: 254px;
+  margin-bottom: 2px;
 }
 .dino-score {
   text-align: end;
@@ -43,7 +47,7 @@
   gap: 10px;
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 45%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
   pointer-events: none;
@@ -63,4 +67,11 @@
   &:active {
     transform: scale(0.9);
   }
+}
+.line-canva {
+  width: 536px;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--text-color);
 }

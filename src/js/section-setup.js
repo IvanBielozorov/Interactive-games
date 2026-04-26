@@ -9,3 +9,7 @@ containers.forEach(container => {
     container.after(line);
   }
 });
+const footballCanva = document.querySelector('.dinosaur-game__wrap');
+const lineEl = document.createElement('div');
+lineEl.classList.add('line-canva');
+footballCanva.after(lineEl);

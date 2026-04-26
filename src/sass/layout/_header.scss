@@ -16,15 +16,9 @@
     align-items: center;
     gap: 20px;
   }
-}
-
-// .logo {
-//   // img {
-//   //   height: 40px;
-//   // }
-// }
-.header-logo {
-  height: 40px;
+  &-logo {
+    height: 40px;
+  }
 }
 
 .nav {
@@ -149,21 +143,8 @@ body.dark-theme {
     url('../images/background.jpg') center no-repeat,
     var(--bg-page);
   transition: color 0.75s ease;
-  // transition-property: background-color, color;
-  // transition-duration: 1000ms, 500ms;
-  // transition-timing-function: ease, ease;
 }
 .dark-theme {
-  // background:
-  //   linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  //   url('../images/background.jpg') center / cover no-repeat,
-  //   var(--bg-page);
-  // transition:
-  // background-color 2s ease,
-  // color 0.75s ease;
-  // transition-property: background-color, color;
-  // transition-duration: 1000ms, 500ms;
-  // transition-timing-function: ease, ease;
   .icon--sun {
     display: none;
   }
