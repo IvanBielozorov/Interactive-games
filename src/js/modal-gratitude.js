@@ -6,9 +6,6 @@
     emailInput: document.querySelector('.footer__input'),
   };
 
-// console.log(refs.emailInput);
-
-
   refs.openModalBtn.addEventListener('click', () => {
     if (
       refs.emailInput.checkValidity() &&

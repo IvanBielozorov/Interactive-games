@@ -19,7 +19,6 @@ function updateNumberArray() {
     refs.result.textContent = 'Введіть число';
     return;
   }
-  console.log(numbers);
   
   const maxNumber = Math.max(...numbers);
   refs.result.textContent = `Найбільше число, яке ви ввели - ${maxNumber}`;

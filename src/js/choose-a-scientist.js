@@ -170,13 +170,10 @@ buttonTexts.forEach(text => {
   button.textContent = text; // assign the unique text
   button.classList.add('scientists-buttons');
   li.appendChild(button);
-  // console.log(li);
   refs.buttonsGridEl.appendChild(li);
   refs.buttonEls.push(button); // store the button in refs
 });
 refs.containerScientistsEls.appendChild(refs.buttonsGridEl);
-
-// refs.buttonEls[7].style.height = '50px';
 
 // Functions for buttons
 

@@ -24,25 +24,24 @@
     line-height: 1.7;
     text-align: center;
     margin-top: 41px;
+    color: black;
   }
   &-life {
     font-size: 8px;
     line-height: 1.7;
     text-align: center;
+    color: black;
   }
   &-buttons-grid {
     width: 857px;
-    // display: flex;
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: center;
     align-items: center;
-    // flex-wrap: wrap;
     gap: 20px 36px;
     margin-left: auto;
     margin-right: auto;
     &-item {
-      // width: calc((100% - 36px) / 2);
       width: fit-content;
       &:nth-child(odd) {
         margin-left: auto;

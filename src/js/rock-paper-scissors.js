@@ -16,7 +16,6 @@ let scoreYou = 0;
 let scoreComp = 0;
 
 // Setup UI
-// refs.winEl.classList.add('rps-win');
 refs.winEl.textContent = 'Виберіть, щоб почати!';
 refs.winEl.style.margin = '36px 0';
 refs.rpsContainer.after(refs.winEl);

@@ -22,15 +22,11 @@ export function setOnWordChange(callback) {
   refs.form.addEventListener('submit', onInputChange);
   function onInputChange(event) {
     event.preventDefault();
-    // const word = refs.input.value;
-    // savedWord = refs.input.value;
-    // onWordChange(savedWord);
     savedWord = refs.input.value;
 
     if (onWordChange) {
       onWordChange(savedWord);
     }
-    // console.log(word);
     toggleModal();
   }
   // Toggle modal

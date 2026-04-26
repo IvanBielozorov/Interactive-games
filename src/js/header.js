@@ -1,7 +1,6 @@
 import { setOnWordChange } from './modal-register.js';
 const userName = document.querySelector('.header__right-user');
 setOnWordChange(word => {
-  // console.log('Submitted value:', word);
   userName.textContent = word;
 });
 const btn = document.getElementById('themeToggle');
@@ -25,7 +24,6 @@ btn.addEventListener('click', () => {
 // suffics
 
 const sufficsWord = document.body.querySelector('.nav__item');
-// console.log(document.querySelector('.nav__link--arrow'));
 sufficsWord.addEventListener('click', toggleSuffix);
 
 // rest
@@ -33,7 +31,7 @@ function toggleSuffix() {
   const link = document.querySelector('.nav__link--arrow');
   link.classList.toggle('is-rotated');
 }
-// }
+
 document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('[data-filter]');
   const sections = document.querySelectorAll('section[id]');
