@@ -26,7 +26,8 @@
 }
 .dinosaur-game__box {
   opacity: 0;
-  background-color: $light-gray;
+  // background-color: $light-gray;
+  background-color: var(--dino-color);
   padding: 25px 20px;
   display: flex;
   flex-direction: column;
@@ -46,10 +47,12 @@
   border: none;
   border-radius: 10px;
   transition: all 250ms ease-in-out;
+  background-color: var(--dino-button-color);
   &:hover,
   &:focus {
     color: $white;
-    background-color: $black;
+    // background-color: $black;
+    background-color: black;
   }
   &:active {
     transform: scale(0.9);

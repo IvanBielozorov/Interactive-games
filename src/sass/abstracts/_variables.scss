@@ -1,26 +1,31 @@
 :root {
-    --bg-page: #ffffff;
-    --bg-container: #ffffff;
-    --text-color: #000000;
-  }
-  
-  .dark-theme {
-    --bg-page: #2b2b2b;
-    --bg-container: #3a3a3a;
-    --text-color: #ffffff;
-  }
+  --bg-page: #ffffff;
+  --bg-container: #ffffff;
+  --text-color: #000000;
+  --hover-color: #f1f1f1;
+  --dino-color: #d9d9d9;
+  --dino-button-color: #a29d9d;
+}
 
+.dark-theme {
+  --bg-page: #2b2b2b;
+  --bg-container: #3a3a3a;
+  --text-color: #ffffff;
+  --hover-color: black;
+  --dino-color: rgb(121, 121, 121);
+  -dino-button-color: rgb(150, 150, 150);
+}
 
 //Fonts
-$font-family: "Montserrat Alternates", sans-serif;
-$second-family: "Inter", sans-serif;
-$third-family: "Sacramento", sans-serif;
+$font-family: 'Montserrat Alternates', sans-serif;
+$second-family: 'Inter', sans-serif;
+$third-family: 'Sacramento', sans-serif;
 
 //Colors
 $black: #000000;
-$white: #FFFFFF;
-$light-gray: #D9D9D9;
-$medium-gray: #7E7E7E;
-$light-green: #5ABB58;
+$white: #ffffff;
+$light-gray: #d9d9d9;
+$medium-gray: #7e7e7e;
+$light-green: #5abb58;
 $green: #039900;
 $red: #990000;

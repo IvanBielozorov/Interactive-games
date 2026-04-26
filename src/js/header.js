@@ -13,8 +13,15 @@ btn.addEventListener('click', () => {
   invertedEl.forEach(el => {
     el.classList.toggle('logo-js');
   });
+  const arrowsEl = document.querySelectorAll(
+    '.our-team__wrapper-arrows-svg-js'
+  );
+  arrowsEl.forEach(el => {
+    el.classList.toggle('logo-js');
+  });
+  const canvasEl = document.querySelector('.dinosaur-game__canvas');
+  canvasEl.classList.toggle('logo-js');
 });
-
 // suffics
 
 const sufficsWord = document.body.querySelector('.nav__item');
@@ -76,4 +83,19 @@ headerContacts.addEventListener('click', e => {
   document.querySelector('.footer').scrollIntoView({
     behavior: 'smooth',
   });
+});
+// close on press on body or escape button
+const checkbox = document.querySelector('.nav__checkbox');
+const navItem = document.querySelector('.nav__item');
+
+document.addEventListener('click', e => {
+  if (!navItem.contains(e.target)) {
+    checkbox.checked = false;
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    checkbox.checked = false;
+  }
 });

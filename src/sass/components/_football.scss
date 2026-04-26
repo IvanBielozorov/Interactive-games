@@ -6,6 +6,11 @@
     width: 720px;
     height: 220px;
     background: #5abb58;
+    background-image:
+      linear-gradient(rgba(90, 187, 88, 0.4)), url('../images/grass.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
   &-ball {
