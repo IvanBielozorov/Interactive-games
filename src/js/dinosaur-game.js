@@ -16,6 +16,10 @@ let mod = -2;
 let pass = true;
 let jumping;
 
+// score
+let score = 0;
+const scoreEl = document.querySelector('[data-dino-score]');
+
 main.drawImage(dino, 30, y, 60, 60);
 
 startBtn.addEventListener('click', () => {
@@ -35,6 +39,8 @@ startBtn.addEventListener('click', () => {
 });
 
 tryAgain.addEventListener('click', () => {
+  score = 0;
+  scoreEl.textContent = score;
   start = setInterval(game, 10);
   gameOn = true;
   end.style.opacity = 0;
@@ -43,6 +49,10 @@ tryAgain.addEventListener('click', () => {
 
 function game() {
   sec += 10;
+
+  score += 1;
+  scoreEl.textContent = score;
+
   if (sec % 2500 === 0) {
     createCactus();
     x = 600;

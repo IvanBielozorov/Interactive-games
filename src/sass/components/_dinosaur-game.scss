@@ -1,6 +1,14 @@
 .dinosaur-game {
   position: relative;
 }
+.dino-title-score {
+  text-align: end;
+  margin-right: 265px;
+}
+.dino-score {
+  text-align: end;
+  margin-right: 280px;
+}
 .dinosaur-game__canvas {
   display: block;
   margin: 0 auto;
